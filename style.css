@@ -1,0 +1,176 @@
+
+/* Primary */
+:root{
+
+--Orange: hsl(25, 97%, 53%);
+
+/* Neutral */
+
+--white: hsl(0, 0%, 100%);
+--light--grey: hsl(217, 12%, 63%);
+--medium--grey: hsl(216, 12%, 54%);
+--dark--blue: hsl(213, 19%, 18%);
+--very--dark--blue: hsl(216, 12%, 8%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;;
+}
+
+/* we add to the body flex properties and heihgt so we can center our content within the body -which will be our card-. */
+body {
+    background: var(--very--dark--blue);
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    height: 100vh;
+    align-items: center;
+}
+
+p {
+    font-size: 15px;
+}
+
+/* then we add a width thtat only takes 90% of the screen mobile, then we add max width so the card doesn't stretch more than we want  */
+.card {
+    width: 90%;
+    background-color: var(--dark--blue);
+    max-width: 400px;
+    border-radius: 6px;
+}
+
+/* with this we center the content in the middle of the card so it doesn't take our card edges */
+.card__align {
+    width: 90%;
+    margin: 0 auto;
+    /* display: none; */
+}
+
+.card__align.hide{
+    display: none;
+}
+
+.star__container {
+    width: 30px;
+    padding: 5px;
+    margin: 15px 0;
+    background: hsl(213, 21%, 24%);
+    border-radius: 50%;
+    text-align: center;
+}
+
+.star__container img{
+    width: 13px;
+}
+
+h1 {
+    color: var(--white);
+    font-size: 22px;
+}
+ p {
+    color: var(--light--grey);
+    margin-top: 5px;
+ }
+
+ /* we give to the form the flex propertie so it can shrink and be flexible, the items within the a flex form such as the button will be able to take all the space without giving them a width */
+ .numbers__form{
+    display: flex;
+    flex-direction: column;
+ }
+
+.numbers__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+.num__general {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 15px 0;
+    border-radius: 50%;
+    background: hsl(212, 16%, 23%);
+    color: var(--light--grey);
+}
+
+.num__general:hover {
+    background: var(--medium--grey);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.num__general.active{
+    background: var(--Orange);
+    color: var(--white);
+}
+
+.button {
+    height: 42px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    color: var(--white);
+    background: var(--Orange);
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: var(--white);
+    color: var(--Orange);
+}
+
+/* now we work in the thank you part */
+
+.content__thankyou-container {
+    display: none;
+}
+
+.content__thankyou-container.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    width: 90%;
+    margin: 2em auto;
+}
+
+.img__phone-container {
+    align-self: center;
+}
+
+.img__phone-container img {
+    width: 100%;
+}
+
+#stars__selected {
+    color: var(--Orange);
+    background: hsl(213, 21%, 24%);
+    padding: 8px;
+    align-self: center;
+    border-radius: 20px;
+}
+
+.thank__you-h1 {
+    text-align: center;
+}
+
+.thank__you-text{
+    text-align: center;
+}
+
+#rate__again-button{
+    height: 42px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    color: var(--white);
+    background: var(--Orange);
+    border: none;
+    cursor: pointer;
+}
